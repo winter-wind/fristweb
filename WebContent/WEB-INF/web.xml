@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <context-param>
+    <param-name>driver</param-name>
+    <param-value>com.mysql.jdbc.Driver</param-value>
+  </context-param>
+  <context-param>
+    <param-name>jdbcUrl</param-name>
+    <param-value>jdbc:mysql://isooou</param-value>
+  </context-param>
+  
+  <servlet>
+    <servlet-name>FirstServlet</servlet-name>
+    <servlet-class>com.isooou.javaweb.FirstServlet</servlet-class>
+    <init-param>
+      <param-name>user</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>1230</param-value>
+    </init-param>
+    <init-param>
+      <param-name>admini</param-name>
+      <param-value>8888</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FirstServlet</servlet-name>
+    <url-pattern>/FServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>SecondServlet</servlet-name>
+    <servlet-class>com.isooou.javaweb.SecondServlet</servlet-class>
+   <!--   <load-on-startup>0</load-on-startup>   -->
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SecondServlet</servlet-name>
+    <url-pattern>/SServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.isooou.javaweb.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>ForwardServlet</servlet-name>
+    <servlet-class>com.isooou.javaweb.ForwardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForwardServlet</servlet-name>
+    <url-pattern>/forwardServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>com.isooou.javaweb.TestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/testServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>RedirectServlet</servlet-name>
+    <servlet-class>com.isooou.javaweb.RedirectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RedirectServlet</servlet-name>
+    <url-pattern>/redirectServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
